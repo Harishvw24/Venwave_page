@@ -1,0 +1,1340 @@
+<!--
+ *  =========================================================================================
+ *  🚀 VENWAVE PHARMACY SAAS LANDING PAGE - MAIN STRUCTURE
+ *  =========================================================================================
+
+ *  👤 Author       : Hari
+ *  📅 Year         : 2026
+ *  📦 Description  : Semantic HTML5 structure for the Venwave pharmacy SaaS landing page.
+ *                  Built with SEO-friendly principles, OG image support, and accessibility.
+
+ *  📂 PAGE STRUCTURE :
+ *  ---------------------------------------------------------------------------------------
+ *  1. 🎩 Header         : Main navigation, logo, and mobile menu.
+ *  2. 🏠 Home           : Hero section with value proposition and CTA.
+ *  3. ℹ️ About          : Brand story, company mission, and pharmacy workflow benefits.
+ *  4. 👟 Products       : Product comparison showcase with AI operations overview.
+ *  5. ✨ Highlights     : Venwave feature grid and roadmap.
+ *  6. 📂 Categories     : Blog and development journey cards.
+ *  7. 📞 Contact        : Contact details and message form.
+ *  8. 🦶 Footer         : Quick links, social media, and copyright.
+
+ *  🛠️ Library :
+ *     - Swiper.js (Slider)
+ *     - AOS (Animate On Scroll)
+ *     - GSAP (GreenSock Animation Platform)
+
+ *  =========================================================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Basic -->
+    <link rel="canonical" href="https://venwave.in" />
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Venwave is a modern pharmacy SaaS platform that automates billing, inventory, customer engagement, and AI-powered operations for smarter healthcare retail.">
+    <meta name="keywords"
+        content="Venwave, Pharmacy SaaS, AI Pharmacy, Pharmacy Software, Inventory Management, WhatsApp Automation, Pharmacy Operations">
+    <meta name="author" content="Venwave">
+
+    <!-- Social Media Tags (Open Graph & Twitter) -->
+    <meta property="og:title" content="Venwave - Run Your Pharmacy Smarter and Grow Faster">
+    <meta property="og:description"
+        content="Automate daily pharmacy operations with AI agents, real-time insights, and connected customer workflows built for modern healthcare businesses.">
+    <meta property="og:image" content="https://venwave.in/og-image.jpg">
+    <meta property="og:url" content="https://venwave.in">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Venwave - Pharmacy Operations, Reimagined">
+    <meta name="twitter:description"
+        content="Use Venwave to automate billing, inventory, customer support, and pharmacy growth with smart AI-powered tools.">
+    <meta name="twitter:image" content="https://venwave.in/og-image.jpg">
+
+    <link rel="shortcut icon" href="Assets/icon-logo.svg" type="image/x-icon">
+    <title>Venwave</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .venwave-accent {
+            color: rgb(54, 231, 54);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    ============================================================================
+    1. HEADER SECTION (Navbar & Mobile Menu)
+    ============================================================================
+    -->
+    <header data-aos-anchor="[data-aos-anchor-navbar]">
+        <div class="Navbar-Container" data-aos-anchor-navbar>
+            <!-- Logo - Left side -->
+            <div class="Logo">
+                <img src="Assets/icon-logo.svg" alt="Venwave Logo" class="Logo-Image" />
+                <span class="Text-Logo">
+                    <span style="color: rgb(54, 231, 54);">Venwave</span>
+                </span>
+            </div>
+            <!-- Navbar Menu - Center -->
+            <nav class="Navbar-Menu" aria-label="Main navigation">
+                <ul class="Menu">
+                    <li><a href="#Home">What we do?</a></li>
+                    <li><a href="#About">Features</a></li>
+                    <li><a href="#Products">Compare</a></li>
+                    <li><a href="#roadmap">Roadmap</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#FAQ">FAQ</a></li>
+                    <li><a href="#Contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="Mobile-Menu-Btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="menu-icon" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="close-icon" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <div class="Mobile-Dropdown" id="mobileDropdown">
+            <ul class="Mobile-Menu">
+                <li><a href="#Home">What we do?</a></li>
+                <li><a href="#About">Features</a></li>
+                <li><a href="#Products">Compare</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#FAQ">FAQ</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- 
+        ============================================================================
+        2. HOME SECTION (Hero Banner)
+        Main hero section with slogan, title, and CTA.
+        ============================================================================
+        -->
+        <section id="Home" class="Home-Section">
+            <div class="Home-Container">
+                <!-- Home Content - Left Side (Text) -->
+                <div class="Home-Content">
+                    <h1 class="Home-Title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"
+                        data-aos-anchor="[data-aos-anchor-navbar]">Run Your Pharmacy Smarter and Grow Faster.</h1>
+                    <p class="Home-Description" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"
+                        data-aos-anchor="[data-aos-anchor-navbar]">
+                        Automate daily operations, engage customers, and make smarter decisions with AI agents built for modern pharmacies.
+                    </p>
+
+                    <div class="Button-Container">
+                        <a href="#Products" class="Home-Button" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600"
+                            data-aos-anchor="[data-aos-anchor-navbar]">
+                            Features
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="Home-Button-Icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                            </svg>
+                        </a>
+
+                        <a href="https://youtube.com/@buildwithhari1?si=aIMLAV2FkkvYMdlJ" target="_blank"
+                            rel="noopener noreferrer" class="Watch-Video-Button" data-aos="zoom-in" data-aos-duration="1000"
+                            data-aos-delay="700" data-aos-anchor="[data-aos-anchor-navbar]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke-width="1.5" stroke="currentColor" class="Watch-Icon">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z" />
+                            </svg>
+                            Watch Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="Home-Image" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="600">
+                    <img src="Assets/Gemini_Generated_Image_wt0ruswt0ruswt0r.png" alt="Aerostreet Osaka Shoes" fetchpriority="high"
+                        width="700" height="700">
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ============================================================================
+        3. ABOUT SECTION (Brand Story & Features)
+        ============================================================================
+        -->
+        <section id="About" class="About-Section">
+            <div class="About-Container">
+                <div class="About-Image" data-aos="fade-right" data-aos-duration="1000">
+                    <img loading="lazy"
+                        src="Assets/about_section.jpg"
+                        alt="Rekor MURI Aerostreet Penjualan Sepatu Terbanyak" width="600" height="400">
+                </div>
+
+                <div class="About-Content" data-aos="fade-left" data-aos-duration="1000">
+                    <p class="About-Title">About Venwave</p>
+                    <h2 class="About-Subtitle">Transforming <span>Pharmacy Operations</span></h2>
+
+                    <p class="About-Description">Venwave is a modern cloud-native platform engineered specifically for retail pharmacies, medical stores, and distributors. Our mission is to streamline store operations, eliminate stockouts, and connect pharmacies directly with patients through WhatsApp AI co-pilots.</p>
+                    <p class="About-Description">Designed for high-speed multi-counter operations, we empower pharmacy owners to manage billing, inventory, and patient CRM seamlessly. Our goal is simple: <strong>"Automating Pharmacies, Empowering Healthcare".</strong></p>
+
+                    <div class="About-Features">
+                        <div class="Feature-Item">
+                            <div class="Feature-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span class="Feature-Text">Ultra-Fast Invoicing Engine</span>
+                        </div>
+                        <div class="Feature-Item">
+                            <div class="Feature-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span class="Feature-Text">Dedicated Customer WhatsApp Bot</span>
+                        </div>
+                        <div class="Feature-Item">
+                            <div class="Feature-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span class="Feature-Text">Batch-Level FEFO Expiry Tracking</span>
+                        </div>
+                        <div class="Feature-Item">
+                            <div class="Feature-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                </svg>
+                            </div>
+                            <span class="Feature-Text">Stream-Based CSV Bill Ingestion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Stats-Container">
+                <div class="Stats-Box" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
+                    <div class="Stats-IconWrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-award w-7 h-7 text-[#ff4b27] group-hover:text-white transition-colors Stats-Icon"
+                            aria-hidden="true" code-path="src/sections/About.tsx:180:17">
+                            <path
+                                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                            </path>
+                            <circle cx="12" cy="8" r="6"></circle>
+                        </svg>
+                    </div>
+                    <span class="Stats-Number">AI Pharmacy Agents</span>
+                </div>
+
+                <div class="Stats-Box" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <div class="Stats-IconWrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-store w-7 h-7 text-[#ff4b27] group-hover:text-white transition-colors Stats-Icon"
+                            aria-hidden="true" code-path="src/sections/About.tsx:180:17">
+                            <path d="M15 21v-5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v5"></path>
+                            <path
+                                d="M17.774 10.31a1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.451 0 1.12 1.12 0 0 0-1.548 0 2.5 2.5 0 0 1-3.452 0 1.12 1.12 0 0 0-1.549 0 2.5 2.5 0 0 1-3.77-3.248l2.889-4.184A2 2 0 0 1 7 2h10a2 2 0 0 1 1.653.873l2.895 4.192a2.5 2.5 0 0 1-3.774 3.244">
+                            </path>
+                            <path d="M4 10.95V19a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8.05"></path>
+                        </svg>
+                    </div>
+                    <span class="Stats-Number">Automated Operations</span>
+                </div>
+
+                <div class="Stats-Box" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                    <div class="Stats-IconWrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="Stats-Icon">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <span class="Stats-Number">AI WhatsApp Assistant</span>
+                </div>
+
+                <div class="Stats-Box" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="600">
+                    <div class="Stats-IconWrapper">
+                        <svg xmlns="https://img.icons8.com/parakeet-line/48/bard.png" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-trending-up w-7 h-7 text-[#ff4b27] group-hover:text-white transition-colors Stats-Icon"
+                            aria-hidden="true" code-path="src/sections/About.tsx:180:17">
+                            <path d="M16 7h6v6"></path>
+                            <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                        </svg>
+                    </div>
+                    <span class="Stats-Number">Pharmacy Analytics</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ============================================================================
+        4. PRODUCTS SECTION (Slider)
+        Featured product showcase using Swiper.js.
+        ============================================================================
+        -->
+        <section id="Products" class="Products-Section">
+            <div class="Products-Container">
+                <div class="Products-Text-Container" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="Products-Title"><span>Venwave vs</span> Legacy Software</h2>
+                    <p class="Products-Description">See how Venwave modernizes your store operations compared to outdated desktop software.</p>
+                </div>
+            </div>
+
+            <div class="Products-Swiper-Container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <div class="swiper Products-Swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="Product-Card">
+                                <div class="Product-Image">
+                                    <img loading="lazy" src="Assets/Comparison_pics/owner_copilot.png"
+                                        alt="Owner Copilot" width="350" height="350">
+                                </div>
+                                <div class="Product-Info">
+                                    <span class="Product-Category">Agentic AI Suite</span>
+                                    <h3 class="Product-Name">Pharma Pilot vs. Manual Management</h3>
+                                    <div class="Product-Compare">
+                                        <h3 class="Product-Compare-Title">Legacy SaaS:</h3>
+                                        <p>Manual reporting, zero actionable insights, and static analytics requiring custom manual queries.</p>
+                                        <h3 class="Product-Compare-Title Product-Compare-Title--accent">Venwave:</h3>
+                                        <p>Autonomous sub-agents (Stock, Appointment, Operations) providing real-time store health, predictive alerts, and automated triggers.</p>
+                                        <h2 class="Product-Compare-Title">24/7 AI Store Copilot</h2>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="Product-Card">
+                                <div class="Product-Image">
+                                    <img loading="lazy"
+                                        src="Assets/Comparison_pics/Pharmacy_bot.png"
+                                        alt="Customer Agent">
+                                </div>
+                                <div class="Product-Info">
+                                    <span class="Product-Category">Customer Agent</span>
+                                    <h3 class="Product-Name">Automated WhatsApp Shop Bot</h3>
+                                     <div class="Product-Compare">
+                                        <h3 class="Product-Compare-Title">Legacy SaaS:</h3>
+                                        <p>Phone calls or manual messaging for orders, physical paper receipts, and zero customer self-service capabilities.</p>
+                                        <h3 class="Product-Compare-Title Product-Compare-Title--accent">Venwave:</h3>
+                                        <p>Dedicated 24/7 customer bot automating order placement, past bill retrievals, and lab test/consultation bookings.</p>
+                                        <h2 class="Product-Compare-Title">Automated Patient Care</h2>
+                                    </div>
+                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="Product-Card">
+                                <div class="Product-Image">
+                                    <img loading="lazy" src="Assets/Comparison_pics/Stock_agents.png"
+                                        alt="Stock Agent">
+                                </div>
+                                <div class="Product-Info">
+                                    <span class="Product-Category">Stock Agent</span>
+                                    <h3 class="Product-Name">Predictive Stock &amp; Batch Guard</h3>
+                                     <div class="Product-Compare">
+                                        <h3 class="Product-Compare-Title">Legacy SaaS:</h3>
+                                        <p>Manual inventory audits, unnoticed batch expiries, and delayed paper purchase orders.</p>
+                                        <h3 class="Product-Compare-Title Product-Compare-Title--accent">Venwave:</h3>
+                                        <p>Autonomous Stock Agent detecting batch expiry horizons and automatically triggering stock re-order workflows</p>
+                                        <h2 class="Product-Compare-Title">Automate Stock Control</h2>
+                                    </div>
+                                    
+    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="Product-Card">
+                                <div class="Product-Image">
+                                    <img loading="lazy"
+                                        src="Assets/Comparison_pics/Appointment_agent.png"
+                                        alt="Booking Agent">
+                                </div>
+                                <div class="Product-Info">
+                                    <span class="Product-Category">Scheduling Agent</span>
+                                    <h3 class="Product-Name">Lab &amp; Consult Booking Workflow</h3>
+                                     <div class="Product-Compare">
+                                        <h3 class="Product-Compare-Title">Legacy SaaS:</h3>
+                                        <p>Paper registers, manual phone scheduling, and unorganized patient follow-up calendars.</p>
+                                        <h3 class="Product-Compare-Title Product-Compare-Title--accent">Venwave:</h3>
+                                        <p>Dedicated Appointment Agent capturing incoming patient requests and fully automating booking schedules.</p>
+                                        <h2 class="Product-Compare-Title"> AI Scheduling Assistant</h2>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+                       
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+        ============================================================================
+        5. ROADMAP SECTION
+        Visual representation of the product's development timeline.
+        ============================================================================
+        -->
+        <section class="roadmap" id="roadmap">
+
+    <!-- Header -->
+            <div class="roadmap-header">
+
+                <h2 class="roadmap-title">From Full-Stack to AI-Powered Pharmacy Operations</h2>
+
+                <p>From full stack application development to AI agent integration, our roadmap outlines the key milestones in creating a smart pharmacy management platform.</p>
+
+                <div class="roadmap-divider"><span></span><i></i><i></i><i></i></div>
+            </div>
+
+
+    <!-- Roadmap Cards -->
+    <div class="roadmap-container">
+
+        <!-- Step 1 -->
+        <div class="roadmap-item step-one">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <div class="roadmap-card">
+
+                <div class="roadmap-icon">
+                    &lt;/&gt;
+                </div>
+
+                <h3>Full Stack Application Development</h3>
+
+                <p>
+                    Build robust, scalable, and user-friendly full stack
+                    applications using modern technologies.
+                </p>
+
+                <ul>
+                    <li>Frontend with React &amp; Tailwind CSS</li>
+                    <li>Backend with Node.js &amp; Express</li>
+                    <li>Database with MongoDB</li>
+                    <li>Authentication &amp; Authorization</li>
+                    <li>Responsive &amp; Modern UI/UX</li>
+                </ul>
+
+                <span class="roadmap-badge">
+                    <span>▱</span>
+                    Foundation
+                </span>
+
+            </div>
+        </div>
+
+
+        <!-- Step 2 -->
+        <div class="roadmap-item step-two">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div class="roadmap-card">
+
+                <div class="roadmap-icon">
+                    🤖
+                </div>
+
+                <h3>AI Agent Development</h3>
+
+                <p>
+                    Design and develop intelligent AI agents capable of
+                    understanding, reasoning, and taking actions.
+                </p>
+
+                <ul>
+                    <li>LLM Integration &amp; Prompt Engineering</li>
+                    <li>Memory &amp; Context Management</li>
+                    <li>Tool Use &amp; Function Calling</li>
+                    <li>Agent Workflow &amp; Reasoning</li>
+                    <li>Evaluation &amp; Optimization</li>
+                </ul>
+
+                <span class="roadmap-badge">
+                    <span>◉</span>
+                    Intelligence
+                </span>
+
+            </div>
+        </div>
+
+
+        <!-- Step 3 -->
+        <div class="roadmap-item step-three">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div class="roadmap-card">
+
+                <div class="roadmap-icon">
+                    🧩
+                </div>
+
+                <h3>Integration of AI Agents &amp; Full Stack</h3>
+
+                <p>
+                    Seamlessly integrate AI agents into full stack
+                    applications to deliver smart and automated experiences.
+                </p>
+
+                <ul>
+                    <li>API &amp; WebSocket Integration</li>
+                    <li>Real-time AI Agent Interaction</li>
+                    <li>Contextual Data Synchronization</li>
+                    <li>Deploy &amp; Monitor End-to-End</li>
+                    <li>Analytics &amp; Performance Tracking</li>
+                </ul>
+
+                <span class="roadmap-badge">
+                    <span>🚀</span>
+                    Innovation
+                </span>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- GitHub CTA -->
+    <div class="github-section">
+
+        <div class="github-content">
+
+            <div class="github-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91
+                        .58.11.79-.25.79-.56v-2.17c-3.2.69-3.87-1.54-3.87-1.54
+                        -.53-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7
+                        1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24
+                        3.34.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.28-5.23-5.69
+                        0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06
+                        0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0
+                        c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06
+                        .73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68
+                        .41.36.78 1.06.78 2.14v3.18c0 .31.21.68.8.56
+                        C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"
+                    />
+                </svg>
+            </div>
+
+            <div>
+                <h3>Explore the Code on GitHub</h3>
+                <p>
+                    Check out our public repository to explore the code,
+                    contribute, and stay up to date with our progress.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Change this URL to your GitHub repository -->
+        <a
+            href="https://github.com/Harishvw24/Venwave"
+            target="_blank"
+            class="github-button"
+        >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91
+                    .58.11.79-.25.79-.56v-2.17c-3.2.69-3.87-1.54-3.87-1.54
+                    -.53-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7
+                    1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24
+                    3.34.95.1-.74.4-1.24.73-1.53-2.55-.29-5.23-1.28-5.23-5.69
+                    0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06
+                    0 0 .96-.31 3.15 1.18a10.9 10.9 0 0 1 5.74 0
+                    c2.19-1.49 3.15-1.18 3.15-1.18.62 1.59.23 2.77.11 3.06
+                    .73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68
+                    .41.36.78 1.06.78 2.14v3.18c0 .31.21.68.8.56
+                    C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5Z"
+                />
+            </svg>
+
+            View GitHub Repository
+
+            <span class="arrow">→</span>
+        </a>
+
+    </div>
+
+</section>
+
+        <!-- 
+        ============================================================================
+        6. BLOGS SECTION
+        Showcasing development process blogs with cards and a CTA.
+        ============================================================================
+        -->
+    <section class="blogs-section" id="blogs">
+
+    <!-- Section Header -->
+    <div class="blogs-header">
+
+        <h1>Building <span>Venwave</span></h1>
+        <h3>
+            <span>Step by Step</span>
+        </h3>
+
+        <p>
+            Insights, learnings, and real updates from our development journey
+            as we build intelligent, full-stack solutions.
+        </p>
+
+        <div class="blogs-divider">
+            <span></span>
+            <i></i>
+            <i></i>
+            <i></i>
+        </div>
+
+    </div>
+
+
+    <!-- Blog Cards -->
+    <div class="blogs-grid">
+
+        <!-- Blog 01 -->
+        <article class="blog-card blog-green">
+
+            <div class="blog-image">
+
+                <img
+                    src="Assets/Blogs_pics/fullstack.jfif"
+                    alt="Full stack application development"
+                >
+
+                <span class="blog-number">01</span>
+
+            </div>
+
+            <div class="blog-content">
+
+                <div class="blog-meta">
+
+                    <span class="blog-category">
+                        Full Stack
+                    </span>
+
+                    <span class="blog-date">
+                        <span>◷</span>
+                        May 20, 2026
+                    </span>
+
+                </div>
+
+                <h3>
+                    Building the Foundation:
+                    Our Full Stack Architecture
+                </h3>
+
+                <p>
+                    How we built a scalable and maintainable full stack
+                    application using React, Node.js, Express, and MongoDB.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- Blog 02 -->
+        <article class="blog-card blog-blue">
+
+            <div class="blog-image">
+
+                <img
+                    src="Assets/Blogs_pics/ai agents2.jfif"
+                    alt="AI agent development"
+                >
+
+                <span class="blog-number">02</span>
+
+            </div>
+
+            <div class="blog-content">
+
+                <div class="blog-meta">
+
+                    <span class="blog-category">
+                        AI Agents
+                    </span>
+
+                    <span class="blog-date">
+                        <span>◷</span>
+                        May 28, 2026
+                    </span>
+
+                </div>
+
+                <h3>
+                    Building Intelligent
+                    AI Agents from Scratch
+                </h3>
+
+                <p>
+                    Exploring LLMs, prompt engineering, memory management,
+                    and tool usage to build smarter AI agents.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- Blog 03 -->
+        <article class="blog-card blog-purple">
+
+            <div class="blog-image">
+
+                <img
+                    src="Assets/Blogs_pics/agents.png"
+                    alt="AI agent integration"
+                >
+
+                <span class="blog-number">03</span>
+
+            </div>
+
+            <div class="blog-content">
+
+                <div class="blog-meta">
+
+                    <span class="blog-category">
+                        Integration
+                    </span>
+
+                    <span class="blog-date">
+                        <span>◷</span>
+                        Jun 05, 2026
+                    </span>
+
+                </div>
+
+                <h3>
+                    Integrating AI Agents
+                    with Full Stack
+                </h3>
+
+                <p>
+                    How we connected AI agents with our full stack application
+                    to deliver real-time, intelligent experiences.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- Blog 04 -->
+        <article class="blog-card blog-orange">
+
+            <div class="blog-image">
+
+                <img
+                    src="Assets/Blogs_pics/deployment.jfif"
+                    alt="Application deployment and scaling"
+                >
+
+                <span class="blog-number">04</span>
+
+            </div>
+
+            <div class="blog-content">
+
+                <div class="blog-meta">
+
+                    <span class="blog-category">
+                        Deployment
+                    </span>
+
+                    <span class="blog-date">
+                        <span>◷</span>
+                        Jun 12, 2026
+                    </span>
+
+                </div>
+
+                <h3>
+                    Deploying &amp; Scaling
+                    Intelligent Applications
+                </h3>
+
+                <p>
+                    Our deployment strategy, monitoring setup, and lessons
+                    learned while scaling Venwave for real users.
+                </p>
+
+                <a href="#" class="read-more">
+                    Read More
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- Bottom CTA -->
+    <div class="blogs-cta">
+
+        <div class="cta-icon">
+            ✎
+        </div>
+
+        <div class="cta-content">
+
+            <h3>Stay Updated</h3>
+
+            <p>
+                Follow our blogs to get the latest updates on features,
+                development, behind-the-scenes stories, and more.
+            </p>
+
+        </div>
+
+        <a href="#" class="cta-button">
+            Explore All Blogs
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>    
+    
+    <!-- FAQ SECTION -->
+<section class="faq-section" id="FAQ">
+
+    <div class="faq-header">
+
+        <h2>
+           Curious About Venwave? <span>Let’s Talk.</span>
+        </h2>
+
+        <p>
+            Learn more about Venwave, the problems it solves,
+            and the product thinking behind its development.
+        </p>
+    </div>
+
+    <div class="faq-container">
+
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+            <button class="faq-question">
+                <span>What is Venwave?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Venwave is a cloud-native pharmacy operating system built
+                    to streamline retail pharmacy operations through POS
+                    billing, inventory management, automation, analytics,
+                    and Agentic AI.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>Why did I build Venwave?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Venwave is an architectural proof of concept built from
+                    scratch to demonstrate how I approach real-world product
+                    development—from understanding business problems and user
+                    workflows to designing and implementing scalable software
+                    solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>What problem does Venwave solve?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Pharmacies manage billing, inventory, distributor
+                    purchases, customer orders, outstanding payments, and
+                    compliance across complex workflows. Venwave brings these
+                    operations together and uses automation and AI to reduce
+                    repetitive work and improve operational efficiency.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>What makes Venwave technically challenging?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Venwave combines multi-tenant architecture, high-volume
+                    medicine search, pharmacy-specific inventory logic such
+                    as FEFO, automated data ingestion pipelines, transactional
+                    workflows, analytics, and AI agents into one integrated
+                    system.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>What can the AI agents actually do?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Venwave uses specialized AI agents for pharmacy workflows,
+                    including customer WhatsApp order and refill assistance,
+                    store management queries, and automated debt-collection
+                    workflows. The goal is to move beyond a simple chatbot
+                    toward action-oriented business automation.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>How did I approach building the product?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    I started with the business workflows rather than the
+                    technology. I identified operational problems, translated
+                    them into product requirements, designed the system
+                    architecture, selected appropriate technologies, and
+                    implemented the product incrementally from scratch.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>What does Venwave demonstrate about me as a developer?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Venwave demonstrates my ability to think beyond individual
+                    features and approach software as a complete product—
+                    understanding requirements, making architectural decisions,
+                    solving domain-specific problems, integrating AI, and
+                    designing for scalability and real-world usage.
+                </p>
+            </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item">
+            <button class="faq-question">
+                <span>What do I want recruiters to take away from Venwave?</span>
+                <span class="faq-icon">+</span>
+            </button>
+
+            <div class="faq-answer">
+                <p>
+                    Venwave is more than a SaaS project. It demonstrates how
+                    I turn an ambiguous business problem into a working
+                    software product. My goal is to show that I can understand
+                    the problem, design the solution, build the system, and
+                    think like a product engineer.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+        <!-- 
+        ============================================================================
+        7. CONTACT SECTION
+        Store location, social media, and message submission form.
+        ============================================================================
+        -->
+        <section id="Contact" class="Contact-Section">
+            <div class="Contact-Container">
+                <div class="Contact-Text-Container" data-aos="fade-up" data-aos-duration="1000">
+                    <span class="Contact-Slogan">Contact Us</span>
+                    <h2 class="Contact-Title">
+                        <span class="Title-Normal4">Let’s</span>
+                        <span class="Title-Accent4">Connect</span>
+                    </h2>
+                    <p class="Contact-Description">Have a question or want to collaborate? Feel free to get in touch with us.</p>
+                </div>
+            </div>
+
+            <div class="Contact-Content-Container">
+                <!-- Informasi Kontak - Left Side -->
+                <div class="Contact-Info" data-aos="fade-right" data-aos-duration="1000">
+                    <h4>Contact Information</h4>
+                    <div class="Contact-Info-Boxes">
+                        <p>Whether you’re a pharmacy owner, developer, partner, or simply curious about Venwave, reach out and let’s start a conversation.</p>
+                        <div class="Contact-Info-Box">
+                            <div class="Info-Box-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                            </div>
+                            <div class="Info-Box-Text">
+                                <h4>Address</h4>
+                                <p>Hyderabad, India</p>
+                            </div>
+                        </div>
+                        <div class="Contact-Info-Box">
+                            <div class="Info-Box-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="Info-Box-Text">
+                                <h4>Phone</h4>
+                                <p>9392516148</p>
+                            </div>
+                        </div>
+                        <div class="Contact-Info-Box">
+                            <div class="Info-Box-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </svg>
+                            </div>
+                            <div class="Info-Box-Text">
+                                <h4>Email</h4>
+                                <p>harishtingirikar2021@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="Contact-Info-Box">
+                            <div class="Info-Box-Icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <div class="Info-Box-Text">
+                                <h4>Operating Hours</h4>
+                                <p>24/7 </p>
+                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Contact-Socials">
+                        <h4>Follow Us</h4>
+                        <div class="Social-Icons-Container">
+                            <a href="https://www.instagram.com/aerostreet" target="_blank" rel="noopener noreferrer"
+                                class="Social-Icon-Box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://www.facebook.com/aerostreetcaesarico" target="_blank"
+                                rel="noopener noreferrer" class="Social-Icon-Box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@aerostreet" target="_blank" rel="noopener noreferrer"
+                                class="Social-Icon-Box">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulir Kontak - Right Side -->
+                <div class="Contact-Form-Wrapper" data-aos="fade-left" data-aos-duration="1000">
+                    <form id="contactForm" class="Contact-Form">
+                        <h3>Let’s Start a Conversation</h3>
+                        <div class="Form-Group">
+                            <label for="name" class="Form-Label">Full Name</label>
+                            <input type="text" id="name" name="name" class="Form-Input" placeholder="Enter your name"
+                                autocomplete="name" required>
+                        </div>
+                        <div class="Form-Group">
+                            <label for="email" class="Form-Label">Email</label>
+                            <input type="email" id="email" name="email" class="Form-Input"
+                                placeholder="Enter your email" autocomplete="email" required>
+                        </div>
+                        <div class="Form-Group">
+                            <label for="phone" class="Form-Label">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="Form-Input"
+                                placeholder="Enter your phone number" autocomplete="tel" >
+                        </div>
+                        <div class="Form-Group">
+                            <label for="subject" class="Form-Label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="Form-Input" placeholder="Message subject"
+                                required>
+                        </div>
+                        <div class="Form-Group">
+                            <label for="message" class="Form-Label">Message</label>
+                            <textarea id="message" name="message" class="Form-Textarea" rows="5"
+                                placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="Form-Button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-send w-5 h-5" aria-hidden="true">
+                                <path
+                                    d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                                </path>
+                                <path d="m21.854 2.147-10.94 10.939"></path>
+                            </svg>
+                            <span>Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+    ============================================================================
+    8. FOOTER SECTION
+    Copyright information, policy links, and social media icons.
+    ============================================================================
+    -->
+    <footer>
+        <section class="Footer-Section">
+            <div class="Footer-Container">
+                <div class="Footer-Content" data-aos="fade-up" data-aos-duration="1000">
+                    <!-- Element 1: Brand Info -->
+                    <div class="Footer-Column Brand-Column">
+                        <h1 class="Footer-Logo"><img src="Assets/icon-logo.svg" alt="Venwave Logo"> Venwave</h1>
+                        <p class="Footer-Desc">Venwave brings pharmacy operations, automation, analytics, and intelligent AI agents together in one modern platform.</p>
+                        <div class="Footer-Contact-List">
+                            <div class="Footer-Contact-Item">
+                                <div class="Contact-Icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                        <circle cx="12" cy="10" r="3" />
+                                    </svg>
+                                </div>
+                                <span>Hyderabad, Telangana</span>
+                            </div>
+                            <div class="Footer-Contact-Item">
+                                <div class="Contact-Icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                    </svg>
+                                </div>
+                                <span>9392516148</span>
+                            </div>
+                            <div class="Footer-Contact-Item">
+                                <div class="Contact-Icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                    </svg>
+                                </div>
+                                <span>harishtingirikar2021@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Element 2: Products -->
+                    <div class="Footer-Column">
+                        <h4 class="Footer-Title">Products</h4>
+                        <ul class="Footer-Links">
+                            <li><a href="#">AI Pharmacy Agents</a></li>
+                            <li><a href="#">Pharmacy POS</a></li>
+                            <li><a href="#">Inventory Management</a></li>
+                            <li><a href="#">Automated Operations</a></li>
+                            <li><a href="#">AI WhatsApp Assistant</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Element 3: Perusahaan -->
+                    <div class="Footer-Column">
+                        <h4 class="Footer-Title">Company</h4>
+                        <ul class="Footer-Links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Element 4: Bantuan -->
+                    <div class="Footer-Column">
+                        <h4 class="Footer-Title">Latest Blogs</h4>
+                        <ul class="Footer-Links">
+                            <li><a href="#">Full stack development</a></li>
+                            <li><a href="#">AI Agents</a></li>
+                            <li><a href="#">Machine Learning in Healthcare</a></li>
+                            <li><a href="#">Our Approach</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer  -->
+            <div class="Footer-Line"></div>
+
+            <div class="Footer-Container">
+                <div class="Footer-Bottom">
+                    <div class="Copyright-Text">
+                        © <span id="copyright-year"></span> Venwave. All rights reserved.
+                    </div>
+                    <div class="Footer-Socials">
+                        <a href="" target="_blank" rel="noopener noreferrer"
+                            class="Social-Box-Footer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer"
+                            class="Social-Box-Footer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer"
+                            class="Social-Box-Footer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <!-- Developer Credit - Bottom Right Fixed -->
+    <div class="Dev-Credit">
+        <a href="https://github.com/Harishvw24/Venwave" target="_blank" rel="noopener noreferrer">
+            <span class="Dev-Name">Developed by </span><span class="Dev-Text">Hari</span>
+        </a>
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/gsap@3.0.1/dist/gsap.min.js' defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js" defer></script>
+
+</body>
+
+</html>
